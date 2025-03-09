@@ -1,0 +1,273 @@
+:root {
+    --primary-color: #ffd700;
+    --secondary-color: #ff4444;
+    --background: #1a1a2e;
+    --surface: #242442;
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.7);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--background), #16213e);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+}
+
+.form-container {
+    background-color: var(--surface);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.university-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.shop-logo {
+    max-width: 200px;
+    height: auto;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+h2 {
+    color: var(--text-primary);
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.form-description {
+    color: var(--text-secondary);
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.input-group label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    background-color: var(--surface);
+    padding: 0 4px;
+}
+
+.input-group input:focus,
+.input-group input:valid {
+    border-color: var(--primary-color);
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label {
+    top: 0;
+    font-size: 14px;
+    color: var(--primary-color);
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.checkbox-wrapper input {
+    display: none;
+}
+
+.custom-checkbox {
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.checkbox-wrapper input:checked + .custom-checkbox {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.checkbox-wrapper input:checked + .custom-checkbox::after {
+    content: '✓';
+    position: absolute;
+    color: var(--surface);
+    font-size: 12px;
+    left: 4px;
+    top: 0;
+}
+
+.forgot-btn {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 14px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.forgot-btn:hover {
+    opacity: 0.8;
+}
+
+
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: var(--background);
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
+}
+
+.back-btn {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: rgba(255, 215, 0, 0.1);
+}
+.register-btn {
+    border: 2px solid var(--primary-color);
+     border-radius:9px;
+     background-color: var(--primary-color);
+     padding: 12px;
+     font-size: 15px;
+     cursor: pointer;
+     transition: all 0.3s ease;
+     border: none;
+     }
+     
+     .register-btn :hover{
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
+     }
+
+.hidden {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-container:not(.hidden) {
+    animation: slideIn 0.3s ease forwards;
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 24px;
+    }
+
+    .university-logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .shop-logo {
+        max-width: 160px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .form {
+        gap: 20px;
+    }
+    .input-myfuntion{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    } 
+}     

@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Premium Ballpens",
+        "price": 25,
+        "image": "ballpen.webp",
+        "id": 1
+    },
+    {
+        "name": "Pencil Set",
+        "price": 350,
+        "image": "pencil set.jpg",
+        "id": 2
+    },
+    {
+        "name": "Notebooks",
+        "price": 40,
+        "image": "notebook.webp",
+        "id": 3
+    },
+    {
+        "name": "Scientific Calculator",
+        "price": 1000,
+        "image": "scie cal.jpg",
+        "id": 4
+    },
+    {
+        "name": "Flash Drive",
+        "price": 230,
+        "image": "flashdrive.jpg",
+        "id": 5
+    }
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Jhames BOT",
+        "email": "jhameseditingph@gmail.com",
+        "address": "Jhajsisu",
+        "payment": "COD",
+        "cart": [
+            {
+                "name": "Premium Ballpens",
+                "price": 25,
+                "quantity": 6
+            }
+        ],
+        "total": 150,
+        "timestamp": "2025-03-07T12:00:00Z"
+    }
+]

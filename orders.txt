@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Jhames Martin",
+        "email": "jhamesediting@gmail.com",
+        "address": "11 MH Delpilar Sanjuan City",
+        "payment": "gcash",
+        "cart": [
+            {
+                "name": "Premium Ballpens",
+                "price": 25,
+                "quantity": 2
+            },
+            {
+                "name": "Notebooks",
+                "price": 40,
+                "quantity": 1
+            }
+        ],
+        "total": 90,
+        "timestamp": "2025-03-07T12:34:56Z"
+    }
+]
